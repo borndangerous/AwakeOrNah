@@ -1,2 +1,18 @@
-.wrapper {font-family: Helvetica, sans-serif; text-align: center; padding-top: 3em;}
-ul {list-style-type: none;} li {margin: 15p 0 15px 0;}
+.wrapper {
+  font-family: "Muli", Helvetica, sans-serif;
+  text-align: center; }
+  .wrapper .content {
+    margin: 5em auto; }
+  .wrapper h1 {
+    margin-top: 1em;
+    font-size: 3em; }
+  .wrapper ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .wrapper li {
+    margin: 15p 0 15px 0;
+    list-style-type: none;
+    line-height: 2em; }
+  .wrapper footer a {
+    color: inherit; }
