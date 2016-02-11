@@ -1,8 +1,14 @@
 var adamResponse = get('http://is-adam-awake.herokuapp.com/');
 var adam = JSON.parse(adamResponse);
+var tz = jstz()
 
-var lastfmMoment = moment(adam.responses.lastfm.time, "DD MMM YYYY, HH:mm").subtract(8, 'hours')
-var githubMoment = moment(adam.responses.github, "YYYY MM DD HH:mm").subtract(8, 'hours')
+console.log(moment.tz("2014-06-01 12:00", tz.timezone_name))
+
+console.log(moment(adam.responses.lastfm.time, "DD MMM YYYY, HH:mm"))
+console.log(moment(adam.responses.github, "YYYY MM DD HH:mm"))
+
+var lastfmMoment = moment(adam.responses.lastfm.time, "DD MMM YYYY, HH:mm")
+var githubMoment = moment(adam.responses.github, "YYYY MM DD HH:mm")
 
 function get(url) {
     var xmlHttp = new XMLHttpRequest();
